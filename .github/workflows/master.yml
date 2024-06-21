@@ -69,6 +69,7 @@ jobs:
         
       - name: functional tests for sdk
         run: |
+          npm install --save-dev ganache-cli truffle
           export SNET_TEST_WALLET_PRIVATE_KEY=${{ secrets.PRIV_KEY }}
           export SNET_TEST_INFURA_KEY=${{ secrets.INF_KEY }}
           export FORMER_SNET_TEST_INFURA_KEY=${{ secrets.FORM_INF_KEY }}
